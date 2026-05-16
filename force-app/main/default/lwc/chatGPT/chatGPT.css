@@ -1,0 +1,17 @@
+.minimized {
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #f4f4f4;
+}
+
+.maximized {
+    max-height: 400px;
+    overflow: auto;
+    transition: max-height 0.3s ease;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #f4f4f4;
+}

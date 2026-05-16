@@ -1,0 +1,28 @@
+/* Control printed page layout */
+@media print {
+    @page {
+        size: A4 portrait;   /* A4 or Letter, portrait or landscape */
+        margin: 10mm;        /* Custom page margins */
+    }
+
+    lightning-button,
+    .slds-card__header,
+    .slds-card__footer {
+        display: none !important;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    .printable-content, .printable-content * {
+        visibility: visible;
+    }
+
+    .printable-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}

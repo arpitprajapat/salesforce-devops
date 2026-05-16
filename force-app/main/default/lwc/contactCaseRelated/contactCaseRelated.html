@@ -1,0 +1,40 @@
+<!-- <template>
+    <lightning-card title="Related Cases">
+        <template if:true={cases}>
+                <lightning-datatable
+                key-field="Id"
+                data={cases}
+                columns={columns}
+                hide-checkbox-column="true">
+            </lightning-datatable>
+        </template>
+
+        <template if:true={error}>
+            <p class="slds-text-color_error">Error loading cases: {error}</p>
+        </template>
+    </lightning-card>
+</template> -->
+
+
+
+<template>
+    <lightning-card title="Related Cases">
+        <template if:true={cases}>
+            <lightning-datatable
+                key-field="Id"
+                data={cases}
+                columns={columns}
+                hide-checkbox-column="true">
+            </lightning-datatable>
+
+            <!-- View All button -->
+            <div class="slds-text-align_center slds-m-top_small">
+                <lightning-button variant="base" label="View All" onclick={handleViewAll}></lightning-button>
+            </div>
+        </template>
+
+        <template if:true={error}>
+            <p class="slds-text-color_error">Error loading cases: {error}</p>
+        </template>
+    </lightning-card>
+</template>

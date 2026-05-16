@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="ChatGPT Integration">
+        <div class="slds-p-around_medium">
+            <lightning-textarea label="Enter Here" value={prompt} onchange={handlePromptChange}></lightning-textarea>
+
+            <div class="slds-m-top_small">
+                <lightning-button label="Ask ChatGPT" onclick={callChatGPT} variant="brand"></lightning-button>
+                <lightning-button label={toggleLabel} onclick={toggleView} class="slds-m-left_small"></lightning-button>
+            </div>
+
+            <template if:true={response}>
+                <div class={outputClass}>
+                    <p>{response}</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

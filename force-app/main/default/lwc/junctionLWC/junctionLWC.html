@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="Create EmplnProject Record">
+        <div class="slds-p-around_medium">
+            <lightning-record-picker
+                label="Select Subject"
+                object-api-name="Subject__c"
+                variant="label-inline"
+                onrecordchange={handleSubjectChange}>
+            </lightning-record-picker>
+            <lightning-record-picker
+                label="Select Project"
+                object-api-name="Project__c"
+                variant="label-inline"
+                onrecordchange={handleProjectChange}>
+            </lightning-record-picker>
+            <br>
+            <!-- <lightning-button label="Cancel" variant="brand" onclick={handleSave} ></lightning-button>
+            
+            <lightning-button label="Save" variant="brand" onclick={handleSave}></lightning-button> -->
+
+
+            <div class="slds-m-top_medium">
+    <lightning-button
+        label="Cancel"
+        onclick={handleCancel}>
+    </lightning-button>
+    <lightning-button
+        label="Save"
+        variant="brand"
+        class="slds-m-left_x-small"
+        onclick={handleSave}
+        disabled={isSaveDisabled}>
+    </lightning-button>
+</div>
+
+
+            {successMsg}
+            {errorMsg}
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Email Verification">
+        <lightning-input label="Email" value={email} onchange={handleEmailChange}></lightning-input>
+        <lightning-button label="Send OTP" onclick={sendOTP} class="slds-m-top_small"></lightning-button>
+
+        <template if:true={otpSent}>
+            <lightning-input label="Enter OTP" value={otp} onchange={handleOTPChange}></lightning-input>
+            <lightning-button label="Verify OTP" onclick={verifyOTP} class="slds-m-top_small"></lightning-button>
+        </template>
+
+        <template if:true={successMessage}>
+            <p class="slds-text-color_success">{successMessage}</p>
+        </template>
+        <template if:true={errorMessage}>
+            <p class="slds-text-color_error">{errorMessage}</p>
+        </template>
+    </lightning-card>
+</template>

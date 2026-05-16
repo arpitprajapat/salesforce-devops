@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="wired with property" icon-name="utility:user">
+        <template if:true={Account.name}>
+            <div class="slds-var-m-around_medium">
+                <template for:each={Accounts.name} for:item="Account">
+                    <lightning-layout key={Account.id} class="slds-var-m-vertical_x-small">
+                    <lightning-layout-item>
+                        {acc.Name}
+                    </lightning-layout-item>
+                    </lightning-layout>
+                </template>
+            </div>
+        </template>
+        <template if:false={Account}>
+            <p>No account data available.</p>
+        </template>
+    </lightning-card>
+</template>

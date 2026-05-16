@@ -1,0 +1,7 @@
+.pill-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.25rem;
+    overflow-x: auto;
+    padding: 0.25rem 0;
+}

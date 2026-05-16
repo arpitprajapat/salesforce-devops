@@ -1,0 +1,78 @@
+<template>
+  <div class="container">
+    <div style="height: 4px; width: 50%; background-color: #007cba; border-radius: 2px; margin: 20px 0;"></div>
+
+    <!-- Top Info Section -->
+    <div class="info-section">
+      <div class="info-box">
+        <img src="https://img.icons8.com/ios-filled/50/id-verified.png" alt="ID Card Icon" />
+        <h2>Blue Cross ID card</h2>
+        <p>Your member ID card is your ticket to covered care. Plus, it unlocks access to MyBlue, your online member account. Be sure to keep it in a convenient place for easy access.</p>
+      </div>
+      <div class="info-box">
+        <img src="https://img.icons8.com/ios-filled/50/open-envelope.png" alt="Welcome Kit Icon" />
+        <h2>Welcome kit</h2>
+        <p>Find coverage details, instructions for finding providers and accessing your Evidence of Coverage, important contact information, and helpful resources to support your health.</p>
+      </div>
+    </div>
+
+    <!-- Horizontal Blue Right Line -->
+    <div class="blue-line-right"></div>
+
+    <!-- WHAT’S NEXT Section -->
+    <div class="whats-next">
+      <h3>WHAT'S NEXT</h3>
+      <div class="next-content">
+        <div class="steps">
+          <label>
+            <input type="radio" name="steps" value="step1" onchange={handleStepChange} checked={isStep1} />
+            Application received
+          </label>
+          <label>
+            <input type="radio" name="steps" value="step2" onchange={handleStepChange} checked={isStep2} />
+            Signing up for MyBlue
+          </label>
+          <label>
+            <input type="radio" name="steps" value="step3" onchange={handleStepChange} checked={isStep3} />
+            Using your Flex Card
+          </label>
+          <label>
+            <input type="radio" name="steps" value="step4" onchange={handleStepChange} checked={isStep4} />
+            Putting your plan to work
+          </label>
+        </div>
+        <div class="next-text">
+          We may reach out to you for additional information to process your application. Keep an eye out for more emails from us that will help you get to know your new plan. Coming soon: How to use MyBlue to easily manage and understand your benefits.
+        </div>
+      </div>
+    </div>
+
+    <!-- Horizontal Green Left Line -->
+    <div class="green-line-left"></div>
+
+    <!-- QUESTIONS Section -->
+    <div class="questions">
+      <h3>QUESTIONS?</h3>
+      <p>Our Team Blue Member Service advocates are here to help. Call Team Blue at the phone number(s) below.</p>
+
+      <div class="contact">
+        <div>
+          <strong>PLAN</strong>
+          <p>Medicare Advantage Prescription Drug (MAPD)</p>
+        </div>
+        <div>
+          <strong>PHONE NUMBER</strong>
+          <p>
+            <a href="tel:18002004255" style="color: #0071bc; text-decoration: none;">
+              1-800-200-4255 TTY: 711
+            </a>
+          </p>
+        </div>
+        <div>
+          <strong>HOURS OF OPERATION</strong>
+          <p>April 1 through September 30, 8:00 a.m. to 8:00 p.m. ET, Monday through Friday.<br>October 1 through March 31, 8:00 a.m. to 8:00 p.m. ET, seven days a week.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

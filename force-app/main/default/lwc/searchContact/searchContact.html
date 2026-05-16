@@ -1,0 +1,118 @@
+<!-- <template>
+
+<lightning-card>
+<div class="slds-form-element">
+<label class="slds-form-element__label">Select an Account</label> -->
+
+<!-- search box -->
+<!-- <div class="slds-combobox_container">
+<div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
+<div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
+<lightning-input type="search" value={searchKey} placeholder="Search" onchange={handleSearchKeyChange}></lightning-input>
+</div>
+</div>
+</div> -->
+
+<!-- selected accounts as pills (single horizontal line) -->
+<!-- <template if:true={selectedRecords.length}>
+<div class="pill-container slds-m-top_x-small">
+<template for:each={selectedRecords} for:item="rec">
+<lightning-pill
+key={rec.recordId}
+label={rec.title}
+name={rec.recordId}
+onremove={handleRemove}>
+</lightning-pill>
+</template>
+</div>
+</template> -->
+
+<!-- dropdown search results -->
+<!-- <template if:true={showDropdown}>
+<div class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid slds-m-top_x-small">
+<ul class="slds-listbox slds-listbox_vertical slds-listbox_fluid" role="presentation">
+<template for:each={searchResults} for:item="result">
+<li key={result.recordId}
+data-id={result.recordId}
+onclick={handleRowSelect}
+class="slds-listbox__item">
+<div class="slds-media slds-listbox__option slds-listbox__option_plain">
+<div class="slds-media__body">
+<div class="slds-truncate">
+    {result.title}
+</div>
+</div>
+</div>
+</li>
+</template>
+</ul>
+</div>
+</template> -->
+</div>
+
+<!-- buttons area inside component -->
+<!-- <div class="slds-p-top_medium slds-text-align_right">
+<lightning-button variant="neutral" label="Cancel" onclick={handleCancel}></lightning-button>
+
+<lightning-button class="slds-m-left_small" variant="brand" label="Done" onclick={handleDone}></lightning-button>
+</div>
+</lightning-card>
+</template> -->
+
+
+
+
+<template>
+
+      
+    <lightning-card title="Multi-Select Account Lookup" icon-name="standard:account">
+        <div class="slds-p-around_medium">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="searchInput">Search Accounts</label>
+                <div class="slds-combobox_container">
+                    <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click">
+                        <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                            <lightning-input id="searchInput" type="search" value={searchKey} placeholder="Search" onchange={handleSearchKeyChange}> </lightning-input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <template if:true={selectedRecords}>
+                <div class="slds-m-top_small pill-container">
+                    <template for:each={selectedRecords} for:item="rec">
+                        <lightning-pill
+                            key={rec.recordId}
+                            label={rec.title}
+                            name={rec.recordId}
+                            onremove={handleRemove}>
+                        </lightning-pill>
+                    </template>
+                </div>
+            </template>
+
+            <template if:true={showDropdown}>
+                <div class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid slds-m-top_x-small">
+                    <ul class="slds-listbox slds-listbox_vertical" role="listbox">
+                        <template for:each={searchResults} for:item="result">
+                            <li 
+                                key={result.recordId}
+                                data-id={result.recordId}
+                                onclick={handleRowSelect}
+                                role="option"
+                                tabindex="0"
+                                class="slds-listbox__option slds-listbox__option_plain slds-has-selection">
+                                <span class="slds-truncate" title={result.title}>{result.title}</span>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </template>
+
+            <div class="slds-m-top_large slds-text-align_right">
+                <lightning-button variant="neutral" label="Cancel" onclick={handleCancel} class="slds-m-right_small"></lightning-button>
+                <lightning-button variant="brand"  label="Save"  onclick={handleDone}></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

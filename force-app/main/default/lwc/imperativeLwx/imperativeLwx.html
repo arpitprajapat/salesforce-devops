@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Imperative lwc">
+        <lightning-button label="Show" variant="brand" onclick={handleClick}>
+        </lightning-button>
+
+       <div style="height: 200px;">
+           
+             <lightning-datatable key-field="Id"
+                             label="Account Details"
+                             data={accounts}
+                             columns={columns}
+                             placeholder="Account details">
+        </lightning-datatable>
+
+        </div>
+
+    </lightning-card>
+</template>

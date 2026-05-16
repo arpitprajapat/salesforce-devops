@@ -1,0 +1,67 @@
+<!-- <template>
+    
+    <div >
+   <lightning-input name="Name" label="Username"  pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" message-when-pattern-mismatch="Please enter a valid email address Eg .guser@domain.com"  required maxlength="255" message-when-too-long="Maximum 255 characters allowed." minlength="10" message-when-too-short="Enter at least 10 characters."></lightning-input>
+
+       <lightning-input name="password" label="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" message-when-pattern-mismatch="Your password does not meet required format." required maxlength="8" message-when-too-long="Maximum 8 characters allowed." minlength="8" message-when-too-short="Enter at least 8 characters."></lightning-input>
+
+    </div>
+
+    <div class = "button" >
+    <lightning-button name = "Login" label = "Login"></lightning-button>
+    </div>  
+ 
+</template> -->
+
+
+
+<template>
+  <div class="slds-card slds-p-around_large">
+    <header class="slds-media slds-media_center slds-has-text-align_center slds-m-bottom_large">
+      <h1 class="slds-text-heading_medium slds-m-bottom_small">Login</h1>
+    </header>
+    
+    <lightning-input type="email"  label="Email Address"  ></lightning-input>
+
+    <!-- <lightning-input 
+      name="email" 
+      label="Email address"
+      type="email"
+      required 
+      placeholder="Enter your email"
+      onchange={handleChange}>
+    </lightning-input> -->
+
+    <lightning-input 
+      name="password" 
+      label="Enter your password"
+      type="password"
+      required 
+      placeholder="Enter your password"
+      class="slds-m-top_medium"
+      onchange={handleChange}>
+    </lightning-input>
+
+    <div class="slds-m-top_medium slds-grid slds-gutters slds-wrap">
+      <div class="slds-col slds-size_1-of-2">
+        <div class="slds-checkbox">
+          <input type="checkbox" id="remember" class="slds-checkbox__input" />
+          <label class="slds-checkbox__label" for="remember">
+            <span class="slds-checkbox_faux"></span>
+            <span class="slds-form-element__label">Remember me</span>
+          </label>
+        </div>
+      </div>
+      <div class="slds-col slds-size_1-of-2 slds-text-align_right">
+        <lightning-button 
+          name="login" 
+          label="Login" 
+          variant="brand"
+          type="submit"
+          class="slds-m-top_small"
+          onclick={handleLogin}>
+        </lightning-button>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,15 @@
+<template>
+  <lightning-card title="Email OTP Verification">
+    <div class="slds-p-around_medium">
+      <lightning-input label="Email" value={email} onchange={handleEmailChange}></lightning-input>
+      <lightning-button label="Send OTP" onclick={sendOtp}></lightning-button>
+
+      <template if:true={otpSent}>
+        <lightning-input label="Enter OTP" value={otp} onchange={handleOtpChange}></lightning-input>
+        <lightning-button label="Verify OTP" onclick={verifyOtp}></lightning-button>
+      </template>
+
+      <p if:true={message}>{message}</p>
+    </div>
+  </lightning-card>
+</template>

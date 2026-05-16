@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Accounts Data Table with Inline Editing">
+        <lightning-datatable
+            key-field="Id"
+            data={accounts}
+            columns={columns}
+            draft-values={draftValues}
+            onsave={handleSave}
+            hide-checkbox-column="true">
+        </lightning-datatable>
+    </lightning-card>
+</template>

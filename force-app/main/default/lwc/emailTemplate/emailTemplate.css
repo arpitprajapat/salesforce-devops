@@ -1,0 +1,136 @@
+.container {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Info boxes with icons */
+.info-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  width: 45%;
+  text-align: center;
+}
+
+.info-box img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.info-box h2 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.info-box p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Blue half-width line aligned right */
+.blue-line-right {
+  width: 50%;
+  height: 4px;
+  background-color: #00bfa5;
+  margin-left: auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+/* Green half-width line aligned left */
+.green-line-left {
+  width: 50%;
+  height: 4px;
+  background-color:  #0071bc;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* What's Next Section */
+.whats-next {
+  text-align: center;
+  background-color: #f0fbff; /* Softer, lighter sky blue */
+  box-shadow: 0 0 15px rgba(135, 206, 250, 0.4); /* Slightly lighter shadow */
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.whats-next h3 {
+  color: #e75c27;
+  margin-bottom: 15px;
+}
+
+.next-content {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.steps {
+  width: 40%;
+}
+
+.steps label {
+  display: block;
+  margin-bottom: 10px;
+  color: #0071bc;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.steps input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #0071bc;
+}
+
+.next-text {
+  width: 55%;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Questions section */
+.questions {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.questions h3 {
+  color: #e75c27;
+  margin-bottom: 10px;
+}
+
+.questions p {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+/* Contact grid */
+.contact {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  text-align: left;
+  gap: 20px;
+}
+
+.contact div {
+  flex: 1;
+}
+
+.contact strong {
+  color: #0071bc;
+  display: block;
+  margin-bottom: 5px;
+}

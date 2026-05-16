@@ -1,0 +1,22 @@
+<template>
+
+<lightning-card title="Take input from user">
+
+
+<lightning-input label="Enter Name" name="Name" id="Name" onchange={handleClickName}>
+</lightning-input>
+
+<lightning-input label="Enter Email" email="Email" id="Email" onchange={handleClickEmail}>
+</lightning-input>
+
+<lightning-button label="Click" variant="brand" onclick={handleClick}></lightning-button>
+
+<div style="height: 200px;">
+<lightning-datatable key-field="Id"
+                     data={data}  
+                     columns={columns}>
+
+</lightning-datatable>  
+</div>
+</lightning-card>
+</template>
